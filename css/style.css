@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin-top: 0;
 }
 
 :root {
@@ -51,6 +52,8 @@ body {
 .neutralStar {
     color: var(--main-bg-color)
 }
+
+/****** Header ******/
 
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
@@ -113,4 +116,35 @@ body {
 
 .popular-cards .card-rating {
     margin-bottom: 5px;
+}
+
+.site-header {
+    display: inline-flex;
+    width: 100%;
+}
+
+.site-header img {
+    height: 35px;
+    margin: 30px 0;
+}
+
+.site-header nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.site-header nav a {
+    padding-top: 10px;
+    margin-left: 50px;
+
+}
+.site-header a {
+    text-decoration: none;
+    color: black;
+}
+
+.site-header a:hover {
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
 }
