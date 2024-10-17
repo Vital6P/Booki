@@ -118,13 +118,15 @@ body {
     margin-bottom: 5px;
 }
 
+/****** HEADER ******/
+
 .site-header {
-    display: inline-flex;
+    display: flex;
     width: 100%;
 }
 
 .site-header img {
-    height: 35px;
+    height: 20px;
     margin: 30px 0;
 }
 
@@ -147,4 +149,58 @@ body {
 .site-header a:hover {
     color: #0065FC;
     border-top: 3px solid #0065FC;
+}
+
+/****** SEARCH AND FILTERS ******/
+h1 {
+    margin-bottom: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+    height: 25px;
+}
+
+.fa-location-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    font-size: 20px;
+    height: 25px;
+    width: 25px;
+    padding: 10px;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    color: black;
+}
+
+.search input {
+    height: 40px;
+    border-top-left-radius: 0;
+    border: 1px solid #F2F2F2;
+}
+
+.search ::placeholder {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+    opacity: 1;
+}
+
+.search p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    background-color: #0065FC;
+    color: white;
+    height: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bold;
+    padding: 0 10px;
 }
