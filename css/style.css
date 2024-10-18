@@ -1,7 +1,9 @@
 /****** General ***********/
+
 * {
     font-family: 'Raleway', sans-serif;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 :root {
@@ -151,7 +153,7 @@ body {
     border-top: 3px solid #0065FC;
 }
 
-/****** SEARCH AND FILTERS ******/
+/****** SEARCH ******/
 h1 {
     margin-bottom: 10px;
 }
@@ -171,16 +173,23 @@ h1 {
     font-size: 20px;
     height: 25px;
     width: 25px;
-    padding: 10px;
+    padding: 9px 10px;
     border-top-left-radius: 25%;
     border-bottom-left-radius: 25%;
     color: black;
 }
 
 .search input {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
     height: 40px;
     border-top-left-radius: 0;
-    border: 1px solid #F2F2F2;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;;
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
 }
 
 .search ::placeholder {
@@ -196,11 +205,77 @@ h1 {
     align-items: center;
     text-align: center;
     margin: 0;
-    background-color: #0065FC;
+    background-color    : #0065FC;
     color: white;
     height: 40px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     font-weight: bold;
-    padding: 0 10px;
+    padding: 1px 10px;
+}
+
+/****** FILTERS ******/
+.filters {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.filters p {
+    margin: 15px;
+    margin-left: 0;
+}
+
+.buttons button {
+    font-weight: bold;
+    height: 50px;
+    border-radius: 30px;
+    border: 2px solid #d9d9d9;
+    font-size: 1.1em;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.buttons .budget {
+    width: 125px;
+}
+
+.buttons .family-friendly {
+    width: 200px;
+}
+
+.buttons .romantic {
+    width: 150px;
+}
+
+.buttons .top-picks {
+    width: 180px;
+}
+
+.buttons button:hover {
+    background-color: #DEEBFF;
+}
+
+.padding-right {
+    padding-right: 10px;
+}
+
+.info {
+    display: flex;
+    width: 427px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.fa-info {
+    font-size: 0.75em;
+    border: 1px solid #dadada;
+    padding: 5px 9px;
+    border-radius: 50px;
+}
+
+.info p {
+    padding-left: 10px;
 }
