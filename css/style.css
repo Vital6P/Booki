@@ -1,5 +1,10 @@
 /****** General ***********/
 
+.main-container {
+    max-width: 1440px;
+    min-width: 1024px;
+}
+
 * {
     font-family: 'Raleway', sans-serif;
     margin-top: 0;
@@ -19,6 +24,7 @@
 body {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .main-container {
@@ -125,6 +131,7 @@ body {
 .site-header {
     display: flex;
     width: 100%;
+    margin-bottom: 25px;
 }
 
 .site-header img {
@@ -154,7 +161,7 @@ body {
 }
 
 /****** SEARCH ******/
-h1 {
+h2 {
     margin-bottom: 10px;
 }
 
@@ -264,7 +271,6 @@ h1 {
 
 .info {
     display: flex;
-    width: 427px;
     align-items: center;
     margin-bottom: 30px;
 }
@@ -278,4 +284,350 @@ h1 {
 
 .info p {
     padding-left: 10px;
+}
+
+/****** Accomodation ******/
+.accommodation {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.accommodation .card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 210px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.accommodation img {
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 110px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .card-text {
+    padding: 10px;
+}
+
+.card .card-text h3 {
+    padding: 5px 0;
+}
+
+.card .stars {
+    padding-left: 10px;
+}
+
+.accommodation h2 {
+    width: 100%;
+}
+
+.accommodation .show-more {
+    display: block;
+    float: left;
+}
+
+/****** Things To Do ******/
+.things-to-do {
+    margin: 75px 25px 75px 25px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.things-to-do .card-container {
+    
+    display: inline-flex;
+    gap: 25px;
+}
+
+.things-to-do .card-text h3 {
+    padding: 10px;
+}
+
+.things-to-do .card {
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
+    display: flex;
+    flex-direction: column;
+    width: 16%;
+    padding: 0;
+}
+
+.card-last {
+    margin-right: 0 !important;
+}
+
+.things-to-do img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 100%;
+}
+
+.things-to-do h2 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/****** FOOTER ******/
+footer {
+    background-color: #F2F2F2;
+    height: 210px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 25px 25px;
+}
+
+footer a:visited {
+    color: black;
+}
+
+footer li:nth-child(n):nth-child(-n+3) {
+    padding-bottom: 25px;
+}
+
+footer .container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+/****** DESKTOP ******/
+@media screen and (min-width: 1440px) {
+    .main-container {
+        max-width: 1440px;
+        min-width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+/****** TABLET ******/
+@media screen and (max-width: 1024px) {
+    .main-container {
+        max-width: 1024px;
+    }
+
+    .accommodation-and-popular {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .accommodation {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .popular {
+        width: 100%;
+    }
+
+    .popular-cards {
+        display: inline-flex;
+        gap: 25px;
+    }
+
+    .popular-cards .card {
+        width: 100%;
+    }
+
+    .things-to-do {
+        height: 350px;
+    }
+
+    .things-to-do .card-container {
+        height: 350px;
+    }
+
+    .things-to-do .card {
+        width: 14.8%;
+        margin: 0;
+    }
+
+    .filters {
+        display: block;
+    }
+
+    footer {
+        height: 205px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    * {
+        margin: 0;
+    }
+    .main-container {
+        display: block;
+        max-width: 768px;
+        min-width: 320px;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .site-header {
+        padding: 0;
+        display: block;
+    }
+
+    .site-header img {
+        display: block;
+        margin: 30px auto;
+        height: 25px;
+    }
+
+    .site-header nav {
+        display: flex;
+        justify-content: space-evenly;
+        white-space: nowrap;
+    }
+
+    .site-header nav a {
+        font-size: 20px;
+        margin: 0px;
+        padding: 0 10%;
+        padding-bottom: 15px;
+    }
+
+    .site-header nav a:hover {
+        border-bottom: 3px solid #0065FC;
+        border-top: none;
+    }
+
+    .body-container {
+        padding: 25px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .search {
+        justify-content: center;
+    }
+
+    .search p {
+        content: url(/images/accommodation/magnifying-glass-solid.svg);
+        border-radius: 15px;
+        padding: 15px;
+        height: 15px;
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.3));
+    }
+
+    .buttons {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 10px;
+    }
+
+    .buttons button {
+        margin: 0;
+    }
+
+    .filters button {
+        padding: 0;
+        width: 175px !important;
+    }
+
+    .buttons .budget {
+        margin-left: 0;
+    }
+
+    .buttons .romantic {
+        margin-left: 0;
+    }
+
+    .info p {
+        font-size: 1.4rem;
+    }
+
+    .popular-title {
+        margin-bottom: 25px;
+    }
+
+    .popular-cards {
+        flex-direction: column;
+    }
+
+    .popular-cards .card {
+        margin-top: 0;
+    }
+
+    .accommodation-and-popular {
+        flex-direction: column-reverse;
+    }
+
+    .accommodation-and-popular section {
+        border-radius: 0;
+    }
+
+    .accommodation-and-popular .accommodation {
+        flex-direction: column;
+        background-color: white !important;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .accommodation .card {
+        height: 250px;
+        width: 100%;
+    }
+
+    .accommodation img {
+        height: 150px;
+    }
+
+    .things-to-do {
+        margin-top: 75px;
+        display: flex;
+    }
+
+    .things-to-do h2 {
+        padding-bottom: 25px;
+    }
+
+    .things-to-do .card-container {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .things-to-do .card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .things-to-do img {
+        object-fit: cover;
+        height: 150px
+    }
+
+    .things-to-do .card-text {
+        padding-left: 20px;
+    }
+
+    /******FOOTER******/
+
+    footer {
+        margin-top: 650px;
+        height: 500px;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer ul {
+        padding-bottom: 0;
+    }
 }
